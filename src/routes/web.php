@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// どんなURLでもapp.blade.phpへ遷移する
+// Route::get('{any}', function () {
+//     return view('app');
+// })->where('any','.*');
